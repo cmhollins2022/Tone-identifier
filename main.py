@@ -21,7 +21,7 @@
 # remove punctuation, then appended to a list:
 def read_and_store_text(file_name):
     file = open(file_name, "r", encoding='utf-8-sig')
-    divided_file_words = str(file.read()).replace("." or "?" or "!", "").split()
+    divided_file_words = str(file.read()).lower().replace("." or "?" or "!", "").split()
 
     return print(divided_file_words)
 
