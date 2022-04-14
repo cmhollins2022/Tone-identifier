@@ -16,3 +16,13 @@
 # We will need a function that takes in a list of words, or that can read a file and break it up into a list of words.
 # (The other possible case could be a front end set-up that allows a user to enter in text through a text through a text
 # Block, then the back-end would stringify and append the words to a list, allowing them to be analyzed further.
+
+# Main file function that allows words to be broken up into individual strings, then appended to a list:
+def read_and_store_text(file_name):
+    file = open(file_name, "r", encoding='utf-8-sig')
+    divided_file_words = str(file.read()).split()
+    
+    return print(divided_file_words)
+
+
+read_and_store_text("sample-text.txt")
