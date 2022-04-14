@@ -7,7 +7,7 @@
 
 # Pseudocode: First Steps
 
-# Step 1: After a file (or list) of words is entered, break up the words, and enter them into a list. Do not include
+# Step 1: After a file or list of words is entered, break up the words, and enter them into a list. Do not include
 # any form of punctuation. The list should be purely made up of the words from the text.
 
 # Main file function that allows words to be broken up into individual strings,
