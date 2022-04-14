@@ -1,5 +1,5 @@
 # Task: In the simplest and most efficient way possible, create a program that identifies the tone of a given file
-# or text block, based on key words.
+# or text block, based on keywords.
 
 # Practicality: This could be a good way to quickly identify the tone and overall feel of someone's writing. The use
 # wouldn't necessarily have to stop there. It could be used to (possibly) suggest replacements for words. A
