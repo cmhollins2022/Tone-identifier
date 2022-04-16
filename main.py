@@ -22,10 +22,10 @@ import re
 #     file = open(file_name, "r", encoding='utf-8-sig')
 #     divided_file_words = str(file.read()).lower().replace('”', '').replace('“', '').replace(',', '').replace(
 #         '.' or '?' or '!', '').split()
-# 
+#
 #     return print(divided_file_words)
-# 
-# 
+#
+#
 # read_and_store_text("sample-text.txt")
 
 # Revised way to list and store only words. (Using ReGex)
@@ -46,6 +46,12 @@ read_and_store_text("sample-text.txt")
 
 
 # Querying the dictionary API... going to explore more strategies and options soon.
+# Idea Alert: Having 5 synonyms of each word both positive and negative... within a list...
+# then, an algorithm could query the API to see if any of the 5 (or more, depending on how accurate
+# or specific we would like to be) can check to see if the words are contained in the
+# "Synonym" array or list of words (for the given word within the API)
+
+# For front end, you could even have an option to possibly give a definition of the word when clicked.
 def identify_tone_of_word():
     access_api = requests.get("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
 
