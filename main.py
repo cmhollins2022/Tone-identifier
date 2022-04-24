@@ -33,3 +33,9 @@ def read_and_store_text(file_name):
 
 
 read_and_store_text("sample-text.txt")
+
+# Querying the dictionary API... going to explore more strategies and options soon.
+# Idea: Having 5 synonyms of each word both positive and negative... within a list...
+# then, an algorithm could query the API to see if any of the 5 (or more, depending on how accurate
+# or specific we would like to be) can check to see if the words are contained in the
+# "Synonym" array or list of words (for the given word within the API)
