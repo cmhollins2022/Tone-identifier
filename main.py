@@ -1,5 +1,7 @@
 import re
 import json
+import string
+
 import requests
 
 
@@ -18,48 +20,16 @@ import requests
 # Main file function that allows words to be broken up into individual strings,
 # remove punctuation, then appended to a list:
 
-# Original way to remove punctuation:
-def read_and_store_text(file_name):
-    file = open(file_name, "r", encoding='utf-8-sig')
-    divided_file_words = str(file.read()).lower().replace('”', '').replace('“', '').replace(',', '').replace(
-        '.' or '?' or '!', '').split()
+# RegEx strategy:
 
-    return print(divided_file_words)
+def read_and_store_text(file_name):
+    new_words_list = []
+    string_and_read_file = open(file_name, "r",
+                                encoding='utf-8-sig').read().split()  # open, read and convert the file into a list
+    for word in string_and_read_file:  # iterate through each of the list items
+        isolated_word = re.sub(r'[^\w\s]', '', word)  # remove everything except for letters
+        new_words_list.append(isolated_word)  # add each isolated word into the new list
+    return print(new_words_list)
 
 
 read_and_store_text("sample-text.txt")
-
-
-# Revised way to list and store only words. (Using ReGex)
-# def read_and_store_text(file_name):
-#     file = open(file_name, "r", encoding='utf-8-sig')
-#     divided_text = str(file.read())
-#     retrieve_only_words = re.sub(".", "", divided_text)
-#
-#     return print(divided_text)
-#
-#
-# def regex_test():
-#     string_text = 'I am trying to remove the "punctuation??" from this string!'
-#     x = re.sub("")
-#
-#
-# read_and_store_text("sample-text.txt")
-
-
-# Querying the dictionary API... going to explore more strategies and options soon.
-# Idea Alert: Having 5 synonyms of each word both positive and negative... within a list...
-# then, an algorithm could query the API to see if any of the 5 (or more, depending on how accurate
-# or specific we would like to be) can check to see if the words are contained in the
-# "Synonym" array or list of words (for the given word within the API)
-
-# For front end, you could even have an option to possibly give a definition of the word when clicked.
-def identify_tone_of_word(word: str):
-    thesaurus_api = requests.get(
-        f"https://www.dictionaryapi.com/api/v3/references/thesaurus/json/{word}"
-        f"?key=457b0e9d-88b8-470d-b118-a7d41baa1d92").json()
-
-    return print(json.dumps(thesaurus_api, indent=1))
-
-
-identify_tone_of_word("success")
