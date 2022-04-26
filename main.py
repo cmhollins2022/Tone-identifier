@@ -34,19 +34,25 @@ def read_and_store_text(file_name):
 
 read_and_store_text("sample-text.txt")
 
+
 # Querying the dictionary API... going to explore more strategies and options soon.
 # Idea: Having 5 synonyms of each word both positive and negative... within a list...
 # then, an algorithm could query the API to see if any of the 5 (or more, depending on how accurate
 # or specific we would like to be) can check to see if the words are contained in the
 # "Synonym" array or list of words (for the given word within the API)
 
-For front end, you could even have an option to possibly give a definition of the word when clicked.
+# For front end, you could even have an option to possibly give a definition of the word when clicked.
 def identify_tone_of_word(word: str):
-    thesaurus_api = requests.get(
+    thesaurus_api = (requests.get(
         f"https://www.dictionaryapi.com/api/v3/references/thesaurus/json/{word}"
-        f"?key=457b0e9d-88b8-470d-b118-a7d41baa1d92").json()
+        f"?key=457b0e9d-88b8-470d-b118-a7d41baa1d92")).json()
+    data = json.load(thesaurus_api)
+    new_list = []
+    for items in data['meta']['syns']:
+        synonyms = items[2]
+        new_list.append(synonyms)
 
-    return print(json.dumps(thesaurus_api, indent=1))
+    return print(new_list)
 
 
 identify_tone_of_word("success")
