@@ -1,5 +1,5 @@
 # Purpose
-This Mock-up will give a brief break-down of the core facets included in the "tone-identifier" mini project.
+A Mock-up to give a brief break-down of the core facets included in the "tone-identifier" mini project.
 
 ## Functionality and Design Structure:
 The program at its core should be able to...
