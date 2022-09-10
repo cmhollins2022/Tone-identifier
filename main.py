@@ -10,7 +10,7 @@ import requests
 
 # Practicality: This could be a good way to quickly identify the tone and overall feel of someone's writing. The use
 # wouldn't necessarily have to stop there. It could be used to (possibly) suggest replacements for words. A
-# functionality similar to the "Grammarly" application. Or perhaps an application that can even dictate the emotion
+# functionality similar to the "Grammarly" application. Or perhaps an application that can even dictate the emotion of the expression on someones's face?
 
 # Pseudocode: First Steps
 
