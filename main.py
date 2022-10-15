@@ -30,6 +30,8 @@ import requests
 # "Synonym" array or list of words (for the given word within the API)
 # For front end, you could even have an option to possibly give a definition of the word when clicked.
 
+# Natural language processing
+
 # RegEx strategies...?
 
 def read_and_store_text(file_name):
