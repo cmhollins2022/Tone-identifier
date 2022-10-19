@@ -32,7 +32,7 @@ import requests
 
 # Natural language processing - IBM
 
-# RegEx strategies...?
+# RegEx strategies...
 
 def read_and_store_text(file_name):
     new_words_list = []
