@@ -19,7 +19,6 @@ import requests
 
 # 2 - Define "Positive" and "Negative" somehow...
 
-
 # Main file function that allows words to be broken up into individual strings,
 # remove punctuation, then appended to a list:
 
