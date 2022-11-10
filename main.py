@@ -29,7 +29,7 @@ import requests
 # "Synonym" array or list of words (for the given word within the API)
 # For front end, you could even have an option to possibly give a definition of the word when clicked.
 
-# Natural language processing - IBM
+# Natural language processing - IBM...
 
 # RegEx strategies...
 
